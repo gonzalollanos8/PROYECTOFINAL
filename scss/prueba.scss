@@ -1,0 +1,342 @@
+@import "tipografia";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #574030;
+}
+nav {
+    background: #c5a188;
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    font-family: 'Dancing Script', cursive;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul li a:hover {
+    color: #574030;
+    box-shadow: none;
+}
+
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul li{
+    float:left;
+    display: inline-block;
+    background: #c5a188;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #574030;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: #574030;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px #574030,
+                0 0 5px #574030;
+}
+
+.fa-plus {
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+
+.show, .icon, input {
+    display: none;
+}
+#logo{
+    text-align: center;
+}
+.opc{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    box-shadow: #574030;
+}
+#opciones{
+        margin-left: 100px;
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: 30px 300px;
+        grid-template-areas: "tortas dulces personalizados";
+}
+#opciones,a{
+        color: #574030;
+        text-decoration: none;
+        font-style: italic;
+        font-size: 100%;
+        font-weight: bold;
+        font-family: 'Rubik', sans-serif;
+}
+#SobreNosotros{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:#c5a188;
+    font-family: 'Rubik', sans-serif;
+    grid-area: sobreNosotros;
+}
+#galeria{
+    margin-left: 150px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 30px 300px;
+    grid-template-areas: "1 2 3";
+}
+h1{
+    text-align: center;
+    color: #574030;
+    font-family: 'Dancing Script', cursive;
+}
+.sn{
+    text-align: center;
+    color: #c5a188;
+    font-family: 'Dancing Script', cursive;
+}
+h2{
+    text-align: center;
+    align-items: top;
+    margin-top: 0%;
+}
+p{
+    text-align: center;
+}
+.TitulosBajos{
+    margin-left: 0px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 30px 300px;
+    grid-column-gap: 3px;
+    grid-template-areas: 'mediosDePago newletter mapa'
+                         'mediosDePago newletter mapa';
+    background-color: #c5a188;
+    font-family: 'Rubik', sans-serif;
+}
+.newletter{
+    grid-area: newletter;
+}
+.mapa{
+    grid-area: mapa;
+}
+.tortas{
+    width: 270px;
+    height: 270px;
+    transition: all 2s;
+    grid-area: tortas;
+}
+.tortas:hover{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    transform:scale(400px);
+    grid-area:  tortas;
+}
+.dulces{
+    width: 270px;
+    height: 270px;
+    transition: all 2s;
+    grid-area: dulces;
+}
+.dulces:hover{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    transform: scale(400px);
+    grid-area: dulces;
+}
+.personalizados{
+    width: 270px;
+    height: 270px;
+    transition: all 2s;
+    grid-area: personalizados;
+}
+.personalizados:hover{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    transform: scale(400px);
+    grid-area: personalizados;
+}
+.TitulosBajos{
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    color: #574030;
+}
+.newletter{
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    color: #574030;
+    text-decoration: underline;
+}
+@media all and (max-width: 968px) {
+   #navegador nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+
+   #navegador nav .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+
+   #navegador nav ul li, nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+  #navegador nav ul ul {
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+   #navegador nav ul ul li {
+        border-bottom: 0px;
+    }
+
+    #navegador nav ul ul a {
+        padding-left: 80px;
+    }
+
+    .show {
+        display: block;
+        color: #c5a188;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover {
+        color: #574030;
+    }
+    .icon {
+        display: block;
+        color: #574030;
+        position: absolute;
+        right: 48px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+    .show + a, ul {
+        display: none;
+    }
+    [id^=btn]:checked + ul {
+        display: block;
+    }
+    #opciones {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0%;
+        background-color: #c5a188;
+    }
+    #galeria{
+        margin-left: 0px;
+        display: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    #SeccionBaja{
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+        padding: 0%;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        align-content: space-around;
+        background-color: #c5a188;
+        font-family: 'Rubik', sans-serif;
+        grid-area: seccionBaja;
+    }
+    #SeccionBaja,ul li{
+        display: flex;
+        flex-direction: column; 
+        list-style: none;
+        margin: 0 7px;
+        padding: 0%;
+        text-align: right;
+    }
+    .TitulosBajos{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0%;
+        background-color: #c5a188;
+        font-family: 'Rubik', sans-serif;
+    }
+ 
+
